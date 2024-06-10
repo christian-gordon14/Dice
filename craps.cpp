@@ -1,6 +1,5 @@
 #include <iostream>
 #include <stdlib.h>
-#include <ctime>
 #include <random>
 #include <chrono>
 
@@ -25,7 +24,6 @@ class Guessing{
                     mt19937 rng(seed);
                     uniform_int_distribution<int> dist(1, 7);
                     num = dist(rng);
-                    cout <<"The correct number is: " << num << endl;
                     cout << "Enter a number between 1 and 7! " << endl;
                     cin >> guess; 
                     if(guess == num){
@@ -35,7 +33,7 @@ class Guessing{
                     else {
                         str = "You Lose!";
                             if (i <= 2){
-                            cout << "Try again" << endl;     
+                            cout << "Try again, the correct number was " << num << endl << "\n";    
                             }
                             else{
                                 cout << "Youre out of chances" << endl;

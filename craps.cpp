@@ -24,7 +24,7 @@ class Guessing{
                     mt19937 rng(seed);
                     uniform_int_distribution<int> dist(1, 7);
                     num = dist(rng);
-                    cout << "Enter a number between 1 and 7! " << endl;
+                    cout << "\nEnter a number between 1 and 7! " << endl;
                     cin >> guess; 
                     if(guess == num){
                         str = "You Win!";
@@ -33,10 +33,10 @@ class Guessing{
                     else {
                         str = "You Lose!";
                             if (i <= 2){
-                            cout << "Try again, the correct number was " << num << endl << "\n";    
+                            cout << "Try again, the correct number was " << num << endl << " ";    
                             }
                             else{
-                                cout << "Youre out of chances" << endl;
+                                cout << "You are out of chances" << endl;
                             }                
                     }
                 }
